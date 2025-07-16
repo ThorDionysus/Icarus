@@ -1,79 +1,79 @@
-# ICARUS - 树木表型分析工具
+# ICARUS - Tree Phenotyping Tool
 
 ![软件图标](icon.ico)
 
-ICARUS 是一款基于微型无人机RGB图像的三维重建与表型分析工具，专为植物表型组学研究设计。
+ICARUS is a 3D reconstruction and phenotyping analysis tool based on RGB images captured by mini drones, specifically designed for plant phenomics research.
 
-## 功能特性
+## Features
 
-- 🚁 基于DJI Mavic 3M无人机和DJI Terra软件的集成解决方案
-- 🌳 三维点云重建与植物表型特征提取
-- 📊 支持多种表型参数计算：
-  - 植物高度
-  - 冠层投影面积
-  - 最大冠层直径
-  - 枝下高等
-- 🔍 K-Means聚类算法实现植物器官分割
-- ⚡ 批处理功能支持大规模数据分析
+- 🚁 Integrated solution with DJI Mavic 3M drone and DJI Terra software
+- 🌳 3D point cloud reconstruction and plant phenotypic feature extraction
+- 📊 Supports multiple phenotypic parameter calculations:
+-  Plant height
+-  Canopy projection area
+-  Maximum canopy diameter
+-  Underbranch height, etc.
+- 🔍 K-Means clustering algorithm for plant organ segmentation
+- ⚡ Batch processing for large-scale data analysis
 
-## 快速开始
+## Quick Start
 
-### 系统要求
-- 操作系统：Windows 8/8.1/10/11 (x64)
-- 推荐配置：Windows 11 专业版（x64）
+### System Requirements
+- OS: Windows 8/8.1/10/11 (x64)
+- Recommended: Windows 11 Professional (x64)
 
-### 安装步骤
-1. 下载最新版本的可执行文件
-2. 确保以下文件位于同一目录：
-   - `lcarus.exe` (主程序)
+### Installation Steps
+1. Download the latest executable file
+2. Ensure the following files are in the same directory:
+   - `lcarus.exe`  (main program)
    - `plotter.exe`
    - `icon.ico`
-3. 双击`lcarus.exe`运行程序
+3. Double-click`lcarus.exe`to run the program
 
-### 基本使用流程
-1. 载入点云文件 (`Load File`)
-2. (可选) 使用Meshlab编辑点云 (`Edit File`)
-3. 进行点云滤波 (`Denoise`)
-4. 执行K-Means聚类分割 (`K-Clustering`)
-5. 计算并导出表型数据 (`Measure`)
+### Basic Workflow
+1. Load point cloud file  (`Load File`)
+2. (Optional) Edit point cloud using Meshlab  (`Edit File`)
+3. Apply point cloud filtering (`Denoise`)
+4. Perform K-Means clustering segmentation (`K-Clustering`)
+5. Calculate and export phenotypic data (`Measure`)
 
 
-## 参数说明
+## Parameter Description
 
-### 投影面积计算参数
-- `voxel size`: 下采样参数 (默认0.03)
-- `alpha`: 边界提取值 (默认30)
-
+### Parameter Description
+- `voxel size`: Downsampling parameter (default: 0.03)
+- `alpha`: Boundary extraction value (default: 30)
+  
 ### 枝下高计算参数
-- `n`: 点云分组数目 (建议以1000为单位)
-- `deta`: 分叉判断比值 (默认0.5)
+- `n`: Number of point cloud groups (recommended in units of 1000)
+- `deta`: Branching judgment ratio (default: 0.5)
+  
+## Batch Processing
 
-## 批处理功能
+Supports batch processing of point cloud data for the same tree species:
+- Select`Menu` > `Batch processing`
+- Choose single-file or multi-file processing
+- Choose single-file or multi-file processing`\\Icarus\\OUTPUT\\`directory
 
-支持批量处理同种树木的点云数据：
-- 选择`Menu` > `Batch processing`
-- 可选择单个文件或多文件处理
-- 所有结果将导出至`\\Icarus\\OUTPUT\\`目录
+## FAQ
 
-## 常见问题
+❓ **Average nearest neighbor distance and K_Value show NA in the output table**
+> Possible cause: Denoise operation was not performed before Measure
 
-❓ **输出表格中Average nearest neighbor distance和K_Value值为NA**
-> 可能未进行Denoise操作就直接执行Measure
+❓ **Underbranch height shows NA or is inaccurate**
+> Adjust the n or deta values, or check if the tree shape is suitable for this software
 
-❓ **枝下高值为NA或不准确**
-> 调整n值或deta值，或检查树形是否适合本软件分析
+## Development Team
 
-## 开发团队
+- **lab**: State Key Laboratory of Plant Environmental Resilience, College of Biological Sciences, China Agricultural University, Beijing 100193, China.
+- **Developers**: Dai Shicheng, Chen Yuqian
+- **Team Members**: Chen Yuqian, Dai Shicheng, Tian Yuan, Xiang Zichen
 
-- **实验室**: 中国农业大学生物学院植物抗逆高效全国重点实验室郭岩课题组
-- **开发人员**: 戴诗成、陈宇潜
-- **团队成员**: 陈宇潜、戴诗成、田媛，向梓晨
-
-## 许可证
-
-本项目采用已申请软件著作权
-![软件著作权证书](LICENSE.pdf)。
+## License
+This project has applied for software copyright registration in the People's Republic of China (Registration No. 2025SR050649)
 
 ---
 
-💡 **提示**: 使用前建议先对少量样本进行参数调试，找到最优参数后再进行批量处理。
+💡 **Tip**: It is recommended to test parameters on a small number of samples before batch processing to find optimal settings.
+
+
