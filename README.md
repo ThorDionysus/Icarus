@@ -44,7 +44,7 @@ ICARUS is a 3D reconstruction and phenotyping analysis tool based on RGB images 
 - `voxel size`: Downsampling parameter (default: 0.03)
 - `alpha`: Boundary extraction value (default: 30)
   
-### 枝下高计算参数
+### Undercanopy Height Calculation Parameters
 - `n`: Number of point cloud groups (recommended in units of 1000)
 - `deta`: Branching judgment ratio (default: 0.5)
   
