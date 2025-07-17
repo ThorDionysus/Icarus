@@ -70,7 +70,7 @@ Supports batch processing of point cloud data for the same tree species:
 - **Team Members**: Chen Yuqian, Dai Shicheng, Tian Yuan, Xiang Zichen
 
 ## License
-This project has applied for software copyright registration in the People's Republic of China (Registration No. 2025SR050649)
+This project has applied for software copyright registration in the People's Republic of China (Registration No. 2025SR0560649)
 
 ---
 
