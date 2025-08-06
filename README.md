@@ -50,14 +50,8 @@ ICARUS is a 3D reconstruction and phenotyping analysis tool based on RGB images 
 ### Undercanopy Height Calculation Parameters
 - `n`: Number of point cloud groups (recommended in units of 1000)
 - `deta`: Branching judgment ratio (default: 0.5)
-  
-## Batch Processing
 
-Supports batch processing of point cloud data for the same tree species:
-- Select`Menu` > `Batch processing`
-- Choose single-file or multi-file processing
-- Choose single-file or multi-file processing`\\Icarus\\OUTPUT\\`directory
-## 💡 How to Use MLP
+### 💡 How to Use MLP
 
 1. Double-click `MLP` to launch the icarus_mlp.exe.
 
@@ -97,7 +91,13 @@ self.fc2 = nn.Linear(2048, 4)
 | 2     | Fruit  |
 | 3     | Noise  |
 
+  
+## Batch Processing
 
+Supports batch processing of point cloud data for the same tree species:
+- Select`Menu` > `Batch processing`
+- Choose single-file or multi-file processing
+- Choose single-file or multi-file processing`\\Icarus\\OUTPUT\\`directory
 ## FAQ
 
 ❓ **Average nearest neighbor distance and K_Value show NA in the output table**
